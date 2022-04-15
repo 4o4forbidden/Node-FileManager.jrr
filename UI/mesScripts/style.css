@@ -1,0 +1,150 @@
+.filesSection{
+    position: relative;
+}
+
+.filesSection .filesControls{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 3px 0 5px;
+    border-radius: 5px;
+    background: #dfdfdf;
+    z-index: 3;
+}
+
+.filesControls i{
+    font-size: 21px;
+    opacity: .3;
+    color: #605f62;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: .4s all;
+}
+
+.filesControls i.mdi-import, .filesControls i.mdi-delete-sweep-outline{
+    display: none;
+}
+
+.filesControls i:hover{
+    opacity: 1;
+    color: #607d8b;
+}
+
+.deplacerCeDossierContent button{
+    background: transparent;
+}
+
+.files{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.files .empty{
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.files .element{
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    font-size: 14px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .4s all;
+}
+
+.files .element:hover,.files .element.selectedFile{
+    background-color: #dfe0e1;
+    box-shadow: -4px 4px 0px 2px rgb(0 0 0 / 10%);
+}
+
+.files .element.dossier::before{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 10px 0;
+    background-image: url('https://images.emojiterra.com/mozilla/512px/1f4c1.png');
+    background-size: cover;
+    align-self: center;
+}
+
+.files .element.fichier::before{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 10px 0;
+    background-image: url('https://freepikpsd.com/file/2019/11/file-2-Transparent-Images.png');
+    background-size: cover;
+    align-self: center;
+}
+
+.files .element.fichier.txt::before{background-image: url('../icons/txt.png');}
+.files .element.fichier.mp3::before{background-image: url('../icons/mp3.png');}
+.files .element.fichier.doc::before{background-image: url('../icons/doc.png');}
+.files .element.fichier.zip::before{background-image: url('../icons/zip.png');}
+.files .element.fichier.html::before{background-image: url('../icons/html.png');}
+.files .element.fichier.jpg::before{background-image: url('../icons/jpg.png');}
+.files .element.fichier.js::before{background-image: url('../icons/js.png');}
+.files .element.fichier.xls::before{background-image: url('../icons/xls.png');}
+.files .element.fichier.css::before{background-image: url('../icons/css.png');}
+.files .element.fichier.pdf::before{background-image: url('../icons/pdf.png');}
+.files .element.fichier.ppt::before{background-image: url('../icons/ppt.png');}
+
+li.breadcrumb-item:last-of-type{
+    filter: brightness(0);
+    opacity: .4;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+#terminalModal .modal-body{
+    background-color: black;
+    border-radius: 5px;
+}
+
+.terminal{
+    background: black;
+    color: lime;
+    font-family: monospace;
+}
+
+.terminalInput{
+    width: 100%;
+    background: black;
+    border: 0;
+    outline: 0;
+    font-family: monospace;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: lime;
+    margin-bottom: 15px;
+}
+
+/* -- */
+
+
+.sidebar{
+    background: #ebebeb !important;
+}
+
+.navbar .navbar-brand-wrapper{
+    background: #ebebeb !important;
+}
+
+body:not(.sidebar-icon-only) .sidebar .nav .nav-item{
+    transform: translateX(-20px);
+}
